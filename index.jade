@@ -1,0 +1,173 @@
+doctype html
+html
+  head
+      title Generics 101
+      meta(charset='utf-8')
+      script(src='slides.js')
+      link(href="https://fonts.googleapis.com/css?family=Gravitas+One|Yeseva+One" rel="stylesheet")
+
+      link(href='styles.css' rel='stylesheet' type='text/css')
+    body
+      section.slides.layout-regular.template-default
+        article.first
+          h3
+            img(src="images/sink.svg" width="300")
+            img(src="images/weight.svg" width="300")
+          h1: mark Generics 101
+          p
+          p
+          p.sub(style="margin:0;").yellow I hope you like this talk
+
+        article
+          h1: mark I&apos;m Ahmad 
+          p: br
+          p.sub.build
+            span Cohort 4.0 <br>
+            span CTO @ JPMC <br>
+            span JavaScript, Go, C <br>
+
+        article.first
+          h3
+            img(src="images/sink.svg" width="300")
+            img(src="images/weight.svg" width="300")
+          h1: mark.build
+            span Generics
+            span ???
+
+        //- article
+        //-   h2(style="font-size:60px;") These slides will be available shortly after this talk <br>I&apos;ll tweet the link out.
+        //-   img(src='images/Twitter_logo_white.png', width='300' style="margin:100px auto")
+
+        //-   h2
+        //-     a(href='http://twitter.com/wesbos', target='_blank') @wesbos
+
+        //- article(style='background:white;')
+        //-   a(href='https://ES6.io/?utm_source=toolingtalk&utm_medium=link&utm_campaign=talkpromo')
+        //-     img.wide(src='https://ES6.io/images/es6-facebook-share.png')
+        //-   a(href='https://ES6.io/?utm_source=toolingtalk&utm_medium=link&utm_campaign=talkpromo') ES6.io
+
+
+        //- article(style='background:white;')
+        //-   a(href='https://ReactForBeginners.com/?utm_source=toolingtalk&utm_medium=link&utm_campaign=talkpromo')
+        //-     img.wide(src='https://reactforbeginners.com/images/facebook-share.png')
+        //-   a(href='https://ReactForBeginners.com/?utm_source=toolingtalk&utm_medium=link&utm_campaign=talkpromo') ReactForBeginners.com
+
+        //- article(style='background:white;')
+        //-   a(href='https://LearnNode.com/?utm_source=toolingtalk&utm_medium=link&utm_campaign=talkpromo')
+        //-     img.wide(src='https://learnnode.com/images/NODE/node-facebook-share.jpg')
+        //-   a(href='https://LearnNode.com/?utm_source=toolingtalk&utm_medium=link&utm_campaign=talkpromo') LearnNode.com
+
+        //- article
+        //-   img.high(src="https://pbs.twimg.com/media/DLTTKRoXUAEwuZR.jpg:large")
+        //-   a(href='https://syntax.fm') Syntax.fm
+        article
+          h1 Generics are hard to grasp
+
+        article.section
+          h1 Bugs
+          p.sub They are always looking for a friend to hang out with
+
+        article
+          h2.skew: mark.build Not all bugs are created equal. Compile-time bugs are much friendlier than runtime bugs.
+
+        article
+          ul.build
+            li Compile-time bugs are easier to detect early on.
+            li The compiler will tell you when and where a bug occurs.
+            li Runtime bugs will wait until 3 days after you push to prod before exploding.
+            li Then you are going to have to respond to 500+ support emails.
+            li You don't want to respond to 500+ support emails.
+
+        article
+          h2.skew: mark Okay, I get it.
+
+        article
+          h1 But what do bugs have to do with generics?
+
+        article
+          h1 Generics will save you from runtime bugs!
+
+        article
+          h1 How?
+
+        article
+          h2.title: mark Benefits to using generic code:
+          ul.build
+            li Stronger type checks at compile time
+            li Elimination of casting
+            li Generic algorithms
+            li And much more...
+
+        article
+          p: mark Imagine we had a spoon that could be used for eating cereal, soup, or oatmeal.
+
+        article
+          h2: mark It already exists!
+          p Does it make sense to have a different spoon for each type?
+
+        article
+          h1 NO
+
+        article
+          img.wide(src="./examples/ex1.png")
+
+        article
+          img.high(src="./examples/ex3.png")
+
+        article
+          h2 pls.
+
+        article
+          img.wide(src="./examples/ex2.png")
+
+        article
+          img.wide(src="./examples/ex4.png")
+
+        article
+          h2: mark Bounded types
+
+        article
+          img.high(src="./examples/ex5.png")
+
+        article
+          img.high(src="./examples/ex6.png")
+
+        article
+          h2: mark Generic Methods?
+
+        article
+          img.wide(src="./examples/ex7.png")
+
+        article
+          h2: mark Wildcards
+          p.sub.flat For when you don't exactly know, but sort of know, but not really
+
+        article
+          h1 Upper bounded, lower bounded, and unbounded
+
+        article
+          img.wide(src="./examples/ex8.png")
+
+        article
+          img.wide(src="./examples/ex9.png")
+
+        article
+          img.wide(src="./examples/ex10.png")
+
+        article
+          h2: mark This is as far as you need to go
+
+        article.section
+          h1 buuuuuuttt
+
+        article.section
+          ul.build
+            li Type erasure
+            li Wildcard capture and helper methods
+            li Bridge/Synthetic methods
+            li Non-reifiable types and heap pollution
+            li Generic restrictions
+            span (okay... maybe you should look at generic restrictions)
+
+        article
+          h1: mark Thanks!
